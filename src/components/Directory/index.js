@@ -1,6 +1,6 @@
 import React from 'react'
-import mens from "./../../assets/mens.jpg"
-import ladies from "./../../assets/ladies.jpg"
+import men from "./../../assets/men.jpg"
+import woman from "./../../assets/woman.jpg"
 import "./styles.scss"
 
 
@@ -11,7 +11,7 @@ function Directory() {
                 <div
                 className="item"
                 style={{
-                    backgroundImage:`url(${ladies})`
+                    backgroundImage:`url(${woman})`
                 }}
                 >
                     <a href="/">
@@ -21,7 +21,7 @@ function Directory() {
                 <div
                 className="item"
                 style={{
-                    backgroundImage:`url(${mens})`
+                    backgroundImage:`url(${men})`
                 }}
                 >
                     <a href="/">
