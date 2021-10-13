@@ -20,7 +20,7 @@ const Header = props => {
                         <ul>
                             <li>
                                 <span onClick={() => auth.signOut()}>
-                                    Logout
+                                    LOGOUT
                                 </span>
                             </li>
                        </ul>
