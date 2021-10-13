@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import "./styles.scss"
 
 import {auth, handleUserProfile} from './../../firebase/utils'
+
+import AuthWrapper from './../../AuthWrapper'
 import FormInput from "../forms/FormInput";
 import Button from './../forms/Button'
 
@@ -59,13 +61,13 @@ class Signup extends Component {
 
     render() {
         const {displayName, email, password, confirmPassword, errors} = this.state;
-        return (
-            <div className="signup">
-                <div className="wrap">
-                    <h2>
-                        Signup
-                    </h2>
 
+        const configAuthWrapper = {
+            headline: 'Registration'
+        }
+        return (
+            <AuthWrapper {...configAuthWrapper}>      
+                    <div className="formWrap">
                     {errors.length > 0 && (
                         <ul>
                             {errors.map((err, index) => {
@@ -77,8 +79,6 @@ class Signup extends Component {
                             })}
                         </ul>
                     )}
-
-                    <div className="formWrap">
                     <form onSubmit={this.handleFormSubmit}>
 
                         <FormInput
@@ -115,9 +115,8 @@ class Signup extends Component {
                         </Button>
 
                     </form>
-                    </div>
                 </div>
-            </div>
+            </AuthWrapper>
         )
     }
 }
